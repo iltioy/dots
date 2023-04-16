@@ -56,11 +56,20 @@ export const drawCircles = (circlesState) => {
 
         // slowwing
 
-        if (
-            circle.x > axisXUpper / 2 + (axisXUpper / 2) * 0.9 ||
-            circle.x < axisXLower + 30 * Math.cos(angle)
-        ) {
-            speed = 60 / (270 / speed);
+        if (isObtAng) {
+            if (
+                circle.x < axisXUpper + 30 * Math.cos(lowerAngle) ||
+                circle.x > axisXLower - 30 * Math.cos(lowerAngle)
+            ) {
+                speed = 60 / (270 / speed);
+            }
+        } else {
+            if (
+                circle.x > axisXUpper - 30 * Math.cos(angle) ||
+                circle.x < axisXLower + 30 * Math.cos(angle)
+            ) {
+                speed = 60 / (270 / speed);
+            }
         }
 
         if (isObtAng) {
