@@ -128,6 +128,14 @@ export const drawCircles = (circlesState) => {
         );
     }
 
+    // let distances = [];
+
+    // let dist = Math.sqrt(
+    //     Math.pow(newCirclesState[0].x - newCirclesState[2].x, 2) +
+    //         Math.pow(newCirclesState[0].y - newCirclesState[2].y, 2)
+    // );
+    // distances.push(dist);
+    // console.log(dist);
     return { newCircles, newCirclesState };
 };
 
